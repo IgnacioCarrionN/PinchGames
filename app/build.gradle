@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "dev.carrion.pinchgames"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner rootProject.ext.testInstrumentation
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation appDependencies.kotlin
+    implementation appDependencies.appCompat
+    implementation appDependencies.recyclerview
+    implementation appDependencies.swipeRefresh
+    implementation appDependencies.material
+    implementation appDependencies.constraintLayout
+    implementation appDependencies.cardView
+    implementation appDependencies.paging
+
+    implementation appDependencies.navigationFragment
+    implementation appDependencies.navigationUI
+
+    implementation appDependencies.lifecycle
+
+    implementation appDependencies.glide
+    kapt appDependencies.glideAnnotation
+
+    implementation appDependencies.koinAndroid
+    implementation appDependencies.koinScope
+    implementation appDependencies.koinViewModel
+
+    implementation appDependencies.retrofit
+    implementation appDependencies.jacksonConverter
+    implementation appDependencies.jacksonModule
+    implementation appDependencies.httpLogging
+
+    implementation appDependencies.room
+    implementation appDependencies.roomKtx
+    kapt appDependencies.kaptRoom
+
+
+
+    testImplementation appTestDependencies.jUnit
+    androidTestImplementation appTestDependencies.runner
+    androidTestImplementation appTestDependencies.espresso
+
+    implementation project(':data')
+    implementation project(':domain')
+
+}

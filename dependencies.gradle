@@ -1,0 +1,93 @@
+ext {
+    // Android
+    minSdkVersion = 14
+    targetSdkVersion = 28
+    versionCode = 1
+    versionName = "1.0"
+    androidCompileSdkVersion = 28
+    testInstrumentation = "android.support.test.runner.AndroidJUnitRunner"
+    // Libraries
+    appCompat = "1.1.0-alpha03"
+    androidxCore = "1.1.0-alpha05"
+    constraintLayout = "1.1.3"
+    recyclerView = "1.0.0"
+    swipeRefresh = "1.0.0"
+    cardview = "1.0.0"
+    navigation = "2.0.0"
+    lifecycle = "2.0.0"
+    material = "1.0.0"
+    paging = "2.1.0"
+    // Retrofit
+    retrofit = "2.5.0"
+    httpLogging = "3.14.0"
+    jacksonModule = "2.9.7"
+    // Glide
+    glide = "4.9.0"
+    // Room
+    room = "2.1.0-alpha05"
+    // Koin
+    koin = "1.0.2"
+    // Test
+    jUnit = "4.12"
+    androidTest = "1.2.0-alpha03"
+    espresso = "3.2.0-alpha03"
+
+    // App module
+    appDependencies = [
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            appCompat : "androidx.appcompat:appcompat:$appCompat",
+            material : "com.google.android.material:material:$material",
+            recyclerview : "androidx.recyclerview:recyclerview:$recyclerView",
+            swipeRefresh : "androidx.swiperefreshlayout:swiperefreshlayout:$swipeRefresh",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$constraintLayout",
+            cardView: "androidx.cardview:cardview:$cardview",
+            paging : "androidx.paging:paging-runtime-ktx:$paging",
+            glide : "com.github.bumptech.glide:glide:$glide",
+            glideAnnotation : "com.github.bumptech.glide:compiler:$glide",
+            koinAndroid : "org.koin:koin-android:$koin",
+            koinScope : "org.koin:koin-androidx-scope:$koin",
+            koinViewModel :  "org.koin:koin-androidx-viewmodel:$koin",
+            retrofit : "com.squareup.retrofit2:retrofit:$retrofit",
+            gsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit",
+            jacksonConverter : "com.squareup.retrofit2:converter-jackson:$retrofit",
+            jacksonModule: "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModule",
+            httpLogging : "com.squareup.okhttp3:logging-interceptor:$httpLogging",
+            room : "androidx.room:room-runtime:$room",
+            roomKtx :  "androidx.room:room-ktx:$room",
+            kaptRoom : "androidx.room:room-compiler:$room",
+            lifecycle : "androidx.lifecycle:lifecycle-extensions:$lifecycle",
+            navigationFragment : "androidx.navigation:navigation-fragment-ktx:$navigation",
+            navigationUI : "androidx.navigation:navigation-ui-ktx:$navigation"
+    ]
+    appTestDependencies = [
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            jUnit : "junit:junit:$jUnit",
+            runner : "androidx.test:runner:$androidTest",
+            testRules : "com.android.support.test:rules:$androidTest",
+            espresso : "androidx.test.espresso:espresso-core:$espresso",
+            koin : "org.koin:koin-test:$koin",
+    ]
+    domainDependencies = [
+            kotlin :  "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
+    ]
+    domainTestDependencies = [
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            jUnit : "junit:junit:$jUnit"
+    ]
+    dataDependencies = [
+            kotlin : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
+            appCompat : "androidx.appcompat:appcompat:$appCompat",
+            paging : "androidx.paging:paging-runtime-ktx:$paging",
+            koinAndroid : "org.koin:koin-android:$koin",
+            koinScope : "org.koin:koin-android-scope:$koin",
+            retrofit : "com.squareup.retrofit2:retrofit:$retrofit",
+            jacksonConverter : "com.squareup.retrofit2:converter-jackson:$retrofit",
+            gsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit",
+            jacksonModule: "com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonModule",
+            httpLogging : "com.squareup.okhttp3:logging-interceptor:$httpLogging",
+            room : "androidx.room:room-runtime:$room",
+            roomKtx :  "androidx.room:room-ktx:$room",
+            kaptRoom : "androidx.room:room-compiler:$room",
+            lifecycle : "androidx.lifecycle:lifecycle-extensions:$lifecycle"
+    ]
+}

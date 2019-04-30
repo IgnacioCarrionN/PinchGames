@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph" app:startDestination="@id/mainListFragment">
+
+    <fragment android:id="@+id/mainListFragment" android:name="dev.carrion.pinchgames.ui.mainlist.MainListFragment"
+              android:label="MainListFragment">
+        <action android:id="@+id/action_mainListFragment_to_gameDetailsFragment"
+                app:destination="@id/gameDetailsFragment"/>
+    </fragment>
+    <fragment android:id="@+id/gameDetailsFragment"
+              android:name="dev.carrion.pinchgames.ui.gamedetails.GameDetailsFragment"
+              android:label="GameDetailsFragment">
+        <argument android:name="id" app:argType="long"/>
+    </fragment>
+</navigation>
